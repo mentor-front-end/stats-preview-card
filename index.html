@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #0A0C1C;
+      padding: 15%;
+    }
+
+    .text-small {
+      font-weight: 400;
+      font-family: Lexend Deca;
+      font-size: 15px;
+    
+    }
+
+    .text-large {
+      font-weight: 700;
+      font-family: Inter;
+    }
+
+    .text-medium {
+      font-family: Inter;
+      font-weight: 400;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5%;
+      background-color: #1B1937;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 30px;
+      height: 27rem;
+      width: 33rem; 
+    }
+
+    .left-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    p {
+      color: white;
+    }
+
+    .insight {
+      color: #AB5CDB;
+    }
+
+    .left-footer p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    h1 {
+      color: white;
+    }
+
+    .left-footer .text-small {
+      font-size: 10px;
+    } 
+
+    @media (max-width:375px) {
+
+      body {
+        display: flex;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        flex-wrap: wrap;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        
+      }
+      
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container text-color">
+    <div class="left">
+      <!-- // flex 1 item 1 -->
+      <h1 class="text-large">Get <span class="insight">insights</span> that help your business grow.</h1>
+
+      <!-- //flex 1 item 2 -->
+      <p class="text-small">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+      <!-- //flex 1 item 3 -->
+      <div class="left-footer">
+        <!-- flex 2 item 1 -->
+        <div>
+          <h1 class="text-medium">10k+</h1>
+          <p class="text-small">COMPANIES</p>
+        </div>
+
+        <!-- flex 2 item 2 -->
+      
+        <div>
+          <h1 class="text-medium">314</h1>
+          <p class="text-small">TEMPLATES</p>
+        </div>
+
+        <!-- flex 2 item 3 -->
+        <div>
+          <h1 class="text-medium">12M+</h1>
+          <p class="text-small">QUERIES</p>
+        </div>
+      </div>
+    </div>
+  
+
+    <picture>
+      <source media="(max-width: 375px)" srcset="images/image-header-mobile.jpg">
+      <img src="images/image-header-desktop.jpg" alt="Header Image">
+    </picture>
+  </div>
+</body>
+</html>
